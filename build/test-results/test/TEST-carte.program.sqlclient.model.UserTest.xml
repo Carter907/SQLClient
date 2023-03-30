@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="carte.program.sqlclient.model.UserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-30T01:04:08" hostname="CARTER_LAPTOP" time="0.014">
+  <properties/>
+  <testcase name="userInstanceTest()" classname="carte.program.sqlclient.model.UserTest" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

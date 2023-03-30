@@ -1,0 +1,3 @@
+package carte.program.sqlclient.model
+
+data class User(val username: String, val password: String)
