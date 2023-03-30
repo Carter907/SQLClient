@@ -1,0 +1,48 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.20-RC2'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'java'
+}
+
+group = 'carte.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// used to print gradle version
+
+tasks.register('printGradleVersion') {
+    doLast {
+        println project.gradle.gradleVersion
+    }
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.xerial:sqlite-jdbc:3.40.1.0"
+    implementation "com.google.code.gson:gson:2.10.1"
+    implementation "org.apache.commons:commons-io:1.3.2"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(17)
+}
+
+javafx {
+    version = "20"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+
+}
+
+application {
+    mainClassName = 'MainKt'
+}
